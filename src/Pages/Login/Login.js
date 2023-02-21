@@ -31,14 +31,14 @@ export default function Login() {
     async function submit() {
         setDisableClick(true);
         const response = await loginUser(username, password);
-        const response2 = await loginUser2(username, password);
+        // const response2 = await loginUser2(username, password);
         console.log(response);
-        console.log(response2);
-        if (response.data && response2.data) {
+        // console.log(response2);
+        if (response.data) {
             localStorage.setItem("pin", JSON.stringify(response.data.user.pin));
 
             localStorage.setItem("user", JSON.stringify(response.data.user.id));
-            localStorage.setItem("user2", JSON.stringify(response2.data.user.id));
+            // localStorage.setItem("user2", JSON.stringify(response2.data.user.id));
             localStorage.setItem(
                 "name",
                 JSON.stringify(
@@ -63,23 +63,23 @@ export default function Login() {
             //potato corner
             localStorage.setItem(
                 "api-key2",
-                JSON.stringify(response2.data.user.api_key).replace(/['"]+/g, "")
+                // JSON.stringify(response2.data.user.api_key).replace(/['"]+/g, "")
             );
             localStorage.setItem(
                 "token2",
-                JSON.stringify(response2.data.user.token)
+                // JSON.stringify(response2.data.user.token)
             );
 
             // message
             toast.success("Successful Login!", { style: toastStyle() });
             setTimeout(() => refreshPage(), 2000);
-        } else if (response.error || response2.error) {
+        } else if (response.error) {
             toast.error(response.error.data.messages.error, {
                 style: toastStyle(),
             });
-            toast.error(response2.error.data.messages.error, {
-                style: toastStyle(),
-            });
+            // toast.error(response2.error.data.messages.error, {
+            //     style: toastStyle(),
+            // });
             // //console.log(response.error.data.messages.error);
             setTimeout(() => refreshPage(), 2000);
         }
