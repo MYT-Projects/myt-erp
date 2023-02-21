@@ -1,0 +1,140 @@
+/* modal */
+.modal-footer {
+    border-top: none !important;
+}
+
+/* buttons */
+.button-secondary,
+.button-primary,
+.button-tertiary,
+.button-warning,
+.dropdown-toggle btn btn-primary,
+.button-warning-fill {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 15px;
+    line-height: 18px;
+
+    text-transform: capitalize;
+    letter-spacing: 0.06em;
+
+    border-radius: 7px;
+    box-shadow: none;
+    width: 9vw;
+    height: 5vh;
+}
+
+.dropdown-toggle btn btn-primary {
+    width: "100%" !important;
+    
+}
+
+.dropdown-item {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: capitalize;
+    letter-spacing: 0.06em;
+}
+
+.button-primary:hover,
+.button-primary:focus,
+.button-primary:active,
+.button-secondary:hover,
+.button-secondary:focus,
+.button-secondary:active,
+.button-tertiary:hover,
+.button-tertiary:focus,
+.button-tertiary:active,
+.button-warning:hover,
+.button-warning:focus,
+.button-warning-fill:active,
+.button-warning-fill:hover,
+.button-warning-fill:focus,
+.button-warning-fill:active,
+.dropdown-toggle btn btn-primary {
+    box-shadow: none;
+}
+
+.button-primary,
+.dropdown-toggle btn btn-primary {
+    background: #169422 !important;
+    border: none !important;
+    color: white;
+}
+
+.button-primary:hover,
+.dropdown-toggle btn btn-primary {
+    background: #077713;
+    border: none;
+    color: white;
+}
+
+.dropdown-toggle btn btn-primary {
+    border-radius: 0 !important;
+}
+
+.button-primary-clear {
+    background: white;
+    border: 2px solid #169422;
+    color: #169422;
+}
+
+.button-primary-clear:hover {
+    background: #077713;
+    border: none;
+    color: white;
+}
+
+.button-secondary {
+    background: white;
+    border: 1px solid #FBC204;
+    color: #FBC204;
+}
+
+.button-secondary:hover {
+    background: #FBC204;
+    border: 1px solid #FBC204;
+    color: white;
+}
+
+.button-tertiary {
+    background: #FBC204;
+    border: 1px solid #FBC204;
+    color: white;
+}
+
+.button-tertiary:hover {
+    background: #eeb600;
+    border: 1px solid #eeb600;
+}
+
+.button-warning {
+    background: white;
+    border: 1px solid #DC3545;
+    color: #DC3545;
+}
+
+.button-warning:hover {
+    border: 2px solid #DC3545;
+    font-weight: 600;
+}
+
+.button-warning-fill {
+    background: #DC3545;
+    border: 1px solid #DC3545;
+    color: white;
+}
+
+.button-warning-fill:hover {
+    background: #df1227;
+    border: 1px solid #df1227;
+}
+
+/* validation */
+.validity-error {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 11px;
+    color: red;
+    text-transform: uppercase;
+    margin-top: 1vh;
+}

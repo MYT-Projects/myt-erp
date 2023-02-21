@@ -1,0 +1,159 @@
+.select-status {
+    font-size: 9px;
+}
+
+.page-title {
+    font-family: 'Gotham-Rounded-Medium';
+    font-weight: bolder;
+    color: #5E5E5E;
+    /* width: max-content; //commented for se po*/ 
+}
+
+.page-subtitle {
+    font-family: 'Gotham-Rounded-Medium';
+    color: #5E5E5E;
+        width: max-content;
+    }
+    
+    .close-btn {
+        background-color: #FBC204 !important;
+    }
+    
+    .label-data {
+        font-family: 'Gotham-Rounded-Medium';
+        font-weight: bold;
+        font-size: 110%;
+    color: #5E5E5E;
+    width: max-content;
+}
+
+.label {
+    color: #5E5E5E;
+    font-size: 100%;
+    font-weight: lighter !important;
+}
+
+.lighter {
+    font-weight: 10px !important;
+    font-style: normal;
+}
+.cash-breakdown-subheader {
+    color: #5E5E5E;
+    font-family: 'Gotham-Rounded-Medium';
+    text-transform: none !important;
+}
+
+.cash-breakdown-container {
+    background: rgba(22, 148, 34, 0.05);
+    border-radius: 5px;
+}
+
+.pink-bg {
+    background-color: pink;
+}
+
+.report-subheader {
+    font-family: 'Gotham-Rounded-Medium';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+    line-height: 38px;
+    display: flex;
+    align-items: flex-end;
+    color: #545454;
+}
+.summ-header {
+    background-color: #F9E25D;
+    box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.cash-sales-summ-cont {
+    background: rgba(22, 148, 34, 0.17);
+    border-radius: 10px;
+    height: 18vw;
+}
+
+.margin-top-3 {
+    margin-top: 3%;
+}
+
+.total-sales-cont {
+    background-color: #169422;
+    color: white !important;
+        padding: 3% 10%;
+    border-radius: 0.25em;
+}
+.green {
+    color: #2a9d3a !important;
+}
+
+.white {
+    color: white !important;
+}
+.float-r {
+    float: right;
+}
+
+.break {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 5px;
+}
+
+.vl {
+    border-left: 6px solid #e0e0e0;
+    height: 100px;
+    margin-left: 50%;
+  }
+
+  .print-header {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 15px;
+    line-height: 18px;
+    color: #545454;
+  }
+
+  .status-red {
+    background: red;
+    border-radius: 30px;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    display: flex !important;
+    padding-top: 5px;
+    color: white;
+  }
+
+  .status-green {
+    background: #2a9d3a;
+    border-radius: 30px;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    display: flex !important;
+    padding-top: 5px;
+    color: white;
+  }
+.print-logo-container {
+    width: 10%;
+    height: auto;
+    display: flex;
+    justify-content: center !important;
+}
+.noscroll {
+    overflow-x: hidden !important;
+}
+
+.right {
+    float: right;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.2rem 0.5rem !important;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}

@@ -1,0 +1,71 @@
+.sales-tbl .rdt_TableHeadRow {
+    font-family: "Gotham-Rounded-Bold";
+    font-size: 14px !important;
+    line-height: 14px !important;
+    color: #169422;
+    text-transform: uppercase;
+    background: #F9E25D !important;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px;
+    /* max-width: fit-content !important; */
+    height: 7vh !important;
+    flex-wrap: wrap;
+    width: "100%" !important;
+}
+
+.sales-tbl .rdt_TableCol,
+.sales-tbl .rdt_TableCol_Sortable {
+    height: 7vh;
+    flex-wrap: wrap;
+}
+
+.sales-tbl .rdt_TableRow {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+    text-transform: none;
+    /* max-width: fit-content !important; */
+    flex-wrap: wrap;
+}
+
+.sales-tbl .rdt_Table {
+    max-width: 100vw !important;
+    /* margin: 1vh 0 1vh .5vw; */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+    /* width: "auto"; */
+}
+
+.sales-tbl .jxflYm {
+    font-family: "Gotham-Rounded-Medium" !important;
+}
+
+.sales-tbl .rdt_Pagination {
+    /* position: 4% 20% !important; */
+    min-height: 6vh !important;
+    height: 6vh !important;
+}
+
+.sales-tbl .eIoOYs {
+    max-height: 80vh !important;
+    /* width: 98% !important; */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    -ms-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+.sales-tbl .rdt_TableHeadRow{
+    max-width: 100vw !important;
+}
+
+.lnndaO {
+    white-space: pre-line !important;
+  }

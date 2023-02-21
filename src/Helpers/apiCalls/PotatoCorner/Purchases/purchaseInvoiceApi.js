@@ -1,0 +1,226 @@
+import {
+    formatDateNoTime,
+    formatYDM,
+    getToken,
+    getToken2,
+    getUser,
+} from "../../../Utils/Common";
+import { getAPICall, postAPICall } from "../../axiosMethodCalls";
+
+//GET
+export const getAllInvoicesPotato = async () => {
+    try {
+        const response = await getAPICall(
+            process.env.REACT_APP_POTATO + "receives/get_all_receive",
+            {
+                requester: getUser(),
+                token: getToken2(),
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error };
+    }
+};
+
+export const getInvoicePotato = async (id) => {
+    try {
+        const response = await getAPICall(
+            process.env.REACT_APP_POTATO + "receives/get_receive",
+            {
+                requester: getUser(),
+                token: getToken2(),
+                receive_id: id,
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error.response };
+    }
+};
+
+export const getPaymentHistoryPotato = async (id) => {
+    try {
+        const response = await getAPICall(
+            process.env.REACT_APP_POTATO + "receives/get_all_invoice_payments",
+            {
+                requester: getUser(),
+                token: getToken2(),
+                receive_id: id,
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error.response };
+    }
+};
+
+//POST
+export const createInvoicePotato = async (invoice, items, po_id) => {
+    try {
+        var payload = {
+            requester: getUser(),
+            token: getToken2(),
+            po_id: po_id,
+            branch_id: invoice.branch_id,
+            supplier_id: invoice.supplier_id,
+            vendor_id: invoice.vendor_id,
+            purchase_date: invoice.purchase_date,
+            receive_date: invoice.received_date,
+            forwarder_id: invoice.forwarder_id,
+            waybill_no: invoice.waybill_no,
+            invoice_no: invoice.invoice_no,
+            dr_no: invoice.dr_no,
+            freight_cost: invoice.freight_cost ? invoice.freight_cost : "0",
+            discount: invoice.discount ? invoice.discount : "0",
+            remarks: invoice.remarks,
+            service_fee: invoice.service_fee,
+
+            item_ids: items.map((item) => {
+                return item.item_id;
+            }),
+            quantities: items.map((item) => {
+                return item.qtyInput;
+            }),
+            units: items.map((item) => {
+                return item.unit;
+            }),
+            prices: items.map((item) => {
+                return item.price;
+            }),
+            po_item_ids: items.map((item) => {
+                return item.po_item_id;
+            }),
+            types: items.map((item) => {
+                return item.type ? item.type : "";
+            }),
+        };
+        //console.log("payload");
+        //console.log(payload);
+
+        const response = await postAPICall(
+            process.env.REACT_APP_POTATO + "receives/create",
+            payload,
+            "potato"
+        );
+
+        return { data: response.data };
+    } catch (error) {
+        return { error: error.response };
+    }
+};
+
+export const updateInvoicePotato = async (invoice, items, id) => {
+    try {
+        var payload = {
+            requester: getUser(),
+            token: getToken2(),
+            receive_id: id,
+            po_id: invoice.po_id,
+            branch_id: invoice.branch_id,
+            supplier_id: invoice.supplier_id,
+            purchase_date: invoice.purchase_date,
+            receive_date: invoice.received_date,
+            forwarder_id: invoice.forwarder_id,
+            waybill_no: invoice.waybill_no,
+            invoice_no: invoice.invoice_no,
+            dr_no: invoice.dr_no,
+            freight_cost: invoice.freight_cost,
+            discount: invoice.discount,
+            // paid_amount: invoice.grand_total,
+            remarks: invoice.remarks,
+            service_fee: invoice.service_fee,
+
+            item_ids: items.map((item) => {
+                return item.item_id;
+            }),
+            quantities: items.map((item) => {
+                return item.qtyInput;
+            }),
+            units: items.map((item) => {
+                return item.unit;
+            }),
+            prices: items.map((item) => {
+                return item.price;
+            }),
+            po_item_ids: items.map((item) => {
+                return item.po_item_id;
+            }),
+        };
+        //console.log("payload");
+        //console.log(payload);
+        const response = await postAPICall(
+            process.env.REACT_APP_POTATO + "receives/update",
+            payload,
+            "potato"
+        );
+
+        return { data: response.data };
+    } catch (error) {
+        return { error: error.response };
+    }
+};
+
+export const deleteInvoicePotato = async (id) => {
+    try {
+        const response = await postAPICall(
+            process.env.REACT_APP_POTATO + "receives/delete",
+            {
+                requester: getUser(),
+                token: getToken2(),
+                receive_id: id,
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error };
+    }
+};
+
+export const filterInvoicePotato = async (filterConfig) => {
+    try {
+        const response = await getAPICall(
+            process.env.REACT_APP_POTATO + "receives/search",
+            {
+                requester: getUser(),
+                token: getToken2(),
+                supplier_id: filterConfig.supplier || "",
+                payment_status: filterConfig.payment_status,
+                vendor_id: filterConfig.vendor_id || "",
+                receive_date_from: filterConfig.date_from
+                    ? formatYDM(filterConfig.date_from)
+                    : "",
+                receive_date_to: filterConfig.date_to
+                    ? formatYDM(filterConfig.date_to)
+                    : "",
+                invoice_no: filterConfig.invoice_no || "",
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error };
+    }
+};
+
+export const closeOverpaidBillPotato = async (id, remarks) => {
+    try {
+        const response = await getAPICall(
+            process.env.REACT_APP_POTATO + "receives/close_overpaid_receive",
+            {
+                requester: getUser(),
+                token: getToken2(),
+                receive_id: id,
+                remarks: remarks,
+            },
+            "potato"
+        );
+        return { data: response.data };
+    } catch (error) {
+        return { error: error.response };
+    }
+};

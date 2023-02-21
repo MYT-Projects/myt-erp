@@ -1,0 +1,393 @@
+import React, { useState } from "react";
+import { Col, Container, Row, Table } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import moment from "moment";
+
+// components
+import PIModal from "./PIModal";
+
+// utils, assets, & styles
+import { getSuppliesInvoice } from "../../../../Helpers/apiCalls/Expenses/suppliesInvoiceApi";
+import {
+    dateFormat,
+    formatDate,
+    formatDateNoTime,
+    formatDateSlash,
+    getName,
+    getTodayDateISO,
+    numberFormat,
+    refreshPage,
+    toastStyle,
+    TokenExpiry,
+} from "../../../../Helpers/Utils/Common";
+import cleanLogo from "../../../../Assets/Images/Login/logo.png";
+import Navbar from "../../../../Components/Navbar/Navbar";
+import TablePagination from "../../../../Components/TableTemplate/Table";
+import { getSEPaymentHistory } from "../../../../Helpers/apiCalls/Expenses/sePurchaseApi";
+
+export default function PrintPurchaseInvoice() {
+    const { id } = useParams();
+    let navigate = useNavigate();
+
+    const [inactive, setInactive] = useState(true);
+    const [paymentInfo, setPaymentInfo] = useState([]);
+    const [printPI, setPrintPI] = useState([]);
+    const [items, setItems] = useState([]);
+
+    async function fetchPI() {
+        setPrintPI({});
+        setItems([]);
+
+        const response = await getSuppliesInvoice(id);
+
+        if (response.error) {
+            TokenExpiry(response);
+        } else {
+            setPrintPI(response.data.data[0]);
+            setItems(response.data.data[0].supplies_receive_items);
+        }
+    }
+
+    async function fetchSEPaymentHistory() {
+        const response = await getSEPaymentHistory(id);
+
+        if (response.data) {
+            var history = response.data.data;
+
+            var allPayments = history.map((payment) => {
+                var info = payment;
+                info.payment_date = formatDateSlash(payment.date);
+                info.type = payment.payment_mode;
+                info.details = payment.payment_mode === "check" ? payment.payment_mode + " - " + payment.check_no
+                        : payment.payment_mode === "bank" ? payment.payment_mode + " - " + payment.reference_no
+                        : payment.payment_mode
+                info.amount = payment.amount || "N/A";
+                return info;
+            });
+            setPaymentInfo(allPayments);
+        }
+    }
+
+    /* print modal handler */
+    const [showPrintModal, setShowPrintModal] = useState(false);
+    const handleShowPrintModal = () => setShowPrintModal(true);
+    const handleClosePrintModal = () => setShowPrintModal(false);
+
+    async function handlePrintPI() {
+        toast.loading("Printing Invoice", { style: toastStyle() });
+        handleClosePrintModal();
+        setTimeout(() => {
+            toast.dismiss();
+            Print();
+        }, 1000);
+    }
+
+    function renderTable() {
+        return (
+            <Table className="align-middle">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {items?.map((item) => {
+                        return (
+                            <tr>
+                                <td>{item.name}</td>
+                                <td>{numberFormat(item.qty)}</td>
+                                <td className="text-lowercase">{item.unit}</td>
+                                <td>{numberFormat(item.price)}</td>
+                                <td>{numberFormat(item.total)}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </Table>
+        );
+    }
+
+    function Print() {
+        let printContents = document.getElementById("printablediv").innerHTML;
+        let originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print(printContents);
+        document.body.innerHTML = originalContents;
+        refreshPage();
+    }
+
+    React.useEffect(() => {
+        fetchPI();
+        fetchSEPaymentHistory();
+    }, []);
+
+    return (
+        <div>
+            <div className="page">
+                <Navbar
+                    onCollapse={(inactive) => {
+                        setInactive(inactive);
+                    }}
+                    active={"SUPPLIES"}
+                />
+            </div>
+            <div className={`container ${inactive ? "inactive" : "active"}`}>
+                <div className="print-container px-3 py-2" id="printablediv">
+                    <div className="text-end print-header d-flex flex-column">
+                        <span>
+                            SE NO. {printPI.se_id}
+                        </span>
+                        <span className="text-uppercase">
+                            {moment(printPI.supplies_receive_date).format("MMMM DD, yyyy")}
+                        </span>
+                    </div>
+                    <div className="d-flex justify-content-center py-1">
+                        <img src={cleanLogo} className="print-logo" />
+                    </div>
+                    <div className="d-flex justify-content-center py-1 mt-1">
+                        <h5 className="print-shop-header">
+                            TRIPLE K EXPRESSFOODS / 3K EXPRESSFOODS / CHK
+                            BUSINESS VENTURES CORP
+                        </h5>
+                    </div>
+
+                    {/* content */}
+                    <div className="print-body mt-5">
+                        <Row>
+                            <Col>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Supplier:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.supplier_name
+                                            ? printPI.supplier_name
+                                            : printPI.vendor_name}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Contact Person:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.contact_person}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Waybill No.:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.waybill_no}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Forwarder:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.forwarder_name}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Invoice No.:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.invoice_no}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center ms-5">
+                                    <Col xs={4} className="print-label">
+                                        Remarks:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.remarks}
+                                    </Col>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        Branch:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.branch_name}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        Type:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.type}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        DR No.:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.dr_no}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        Contact No.:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {printPI.phone_no}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        Date Purchased:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {dateFormat(printPI.purchase_date)}
+                                    </Col>
+                                </div>
+                                <div className="d-flex my-2 align-items-center">
+                                    <Col xs={4} className="print-label">
+                                        Date Received:
+                                    </Col>
+                                    <Col xs={7} className="print-data">
+                                        {dateFormat(printPI.supplies_receive_date)}
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                        <div className="d-flex mt-5 mb-2 justify-content-evenly">
+                            {/* table */}
+                            <div className="print-table mt-3 mx-2">
+                                {renderTable()}
+                            </div>
+                        </div>
+                        <Row className="print-grand-total my-3 text-end mr-0">
+                            <Col xs={3} className="print-table-footer-label">
+                                SUBTOTAL
+                            </Col>
+                            <Col
+                                xs={2}
+                                className="print-table-footer-data text-left pl-37"
+                            >
+                                PHP{" "}
+                                {printPI.subtotal
+                                    ? numberFormat(printPI.subtotal)
+                                    : "0.00"}
+                            </Col>
+                        </Row>
+                        <Row className="print-grand-total my-3 text-end mr-0">
+                            <Col xs={3} className="print-table-footer-label">
+                                FREIGHT COST
+                            </Col>
+                            <Col
+                                xs={2}
+                                className="print-table-footer-data text-left pl-37"
+                            >
+                                PHP {printPI?.freight_cost || "0.00"}
+                            </Col>
+                        </Row>
+                        <Row className="print-grand-total my-3 text-end mr-0">
+                            <Col xs={3} className="print-table-footer-label">
+                                DISCOUNT
+                            </Col>
+                            <Col
+                                xs={2}
+                                className="print-table-footer-data text-left pl-37"
+                            >
+                                PHP {printPI?.discount || "0.00"}
+                            </Col>
+                        </Row>
+                        <Row className="print-grand-total my-3 text-end mr-0">
+                            <Col xs={3} className="print-table-footer-label">
+                                GRAND TOTAL
+                            </Col>
+                            <Col
+                                xs={2}
+                                className="print-table-footer-data text-left pl-37"
+                            >
+                                PHP{" "}
+                                {printPI.grand_total
+                                    ? numberFormat(printPI.grand_total)
+                                    : "0.00"}
+                            </Col>
+                        </Row>
+                        <div className="print-signatures">
+                            <span className="text-center text-uppercase print-label fw-bold">
+                                {getName()}
+                            </span>
+                            <span className="text-center text-uppercase print-label fw-bold">
+                                {printPI.prepared_by}
+                            </span>
+                        </div>
+                        <div className="print-signatories pb-4 mb-4">
+                            <span>Received by</span>
+                            <span>Prepared by</span>
+                        </div>
+                    </div>
+                </div>
+
+                <Container
+                    fluid
+                    className="PI-payment-info-wrapper mt-5 py-3 px-3 edit-form"
+                >
+                    <h5 className="PI-payment-info">PAYMENT INFO</h5>
+                    <div className="justify-content-center">
+                        <TablePagination
+                            tableHeaders={[
+                                "PAYMENT DATE",
+                                "TYPE",
+                                "DETAILS",
+                                "AMOUNT",
+                            ]}
+                            headerSelector={[
+                                "payment_date",
+                                "type",
+                                "details",
+                                "amount",
+                            ]}
+                            tableData={paymentInfo}
+                        />
+                    </div>
+                </Container>
+
+                {/* footer */}
+                <div className="d-flex justify-content-end my-4 d-flex-responsive">
+                    <button
+                        className="button-secondary me-3"
+                        onClick={() => navigate("/se/purchaseinvoices")}
+                    >
+                        Close
+                    </button>
+                    <button
+                        className="button-tertiary me-3"
+                        onClick={() =>
+                            navigate("/se/purchaseinvoices/edit/" + id)
+                        }
+                    >
+                        Edit
+                    </button>
+                    <button
+                        className="button-primary"
+                        onClick={handleShowPrintModal}
+                    >
+                        Print
+                    </button>
+                </div>
+            </div>
+            {/* modals */}
+            <PIModal
+                show={showPrintModal}
+                hide={handleClosePrintModal}
+                type="print"
+                handler={handlePrintPI}
+            />
+        </div>
+    );
+}

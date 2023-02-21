@@ -1,0 +1,106 @@
+.paysupplier-items {
+    width: 60vw !important;
+}
+.react-select-container{
+    font-family: 'Gotham-Rounded-Medium';
+        font-style: normal;
+        color: #545454 !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.entries-not-found {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gotham-Rounded-Medium";
+    text-transform: none;
+    color: #545454;
+}
+
+.ps-select {
+    border: 1px solid #B9B9B9;
+    border-radius: 10px;
+}
+
+.select-cell .react-select__control--is-focused {
+    border-color: #2a9d3a !important;
+    box-shadow: 0 0 0 0.1rem #2a9d3a !important;
+}
+
+
+.ps-table td:nth-child(1), .ps-table td:nth-child(1) .react-select__control, .ps-table td:nth-child(1) .react-select__input{
+    width: 20vw !important;
+}
+
+.ps-table td:nth-child(1) .react-select__input, 
+.ps-table td:nth-child(1) .react-select__single-value{
+    padding-left: 8px !important;
+}
+
+
+.ps-label {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 15px;
+    line-height: 18px;
+    color: #5E5E5E;
+    text-transform: uppercase;
+    
+}
+
+.select-cell {
+    margin: 0;
+    padding: 0;
+}
+
+.ps-label-content {
+    font-family: "Gotham-Rounded-Medium";
+}
+
+.view-btn {
+    font-size: 13px;
+    line-height: 15px;
+    height: 4vh;
+    width: 8vh;
+}
+
+.edit-purchased-items td .react-select__control {
+    border-radius: 10px;
+
+}
+
+.sentence {
+    text-transform: none !important;
+    margin-left: 15px;
+}
+
+.click-to-add-prompt {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-supplier-prompt {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 12px;
+    color: #df1227;
+}
+
+.link-to-add {
+    color: #2a9d3a;
+}
+
+.f-right {
+    float: right;
+}
+
+.below {
+    z-index: 0;
+}
+
+.display-none {
+    display: none;
+}

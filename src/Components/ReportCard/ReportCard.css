@@ -1,0 +1,88 @@
+.report-cont {
+    border: 1px solid #A4A4A5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 3%;
+    margin-top: 4px;
+}
+
+.report-center-cont {
+    padding: 10px !important;
+}
+
+.report-nav-cont {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px !important;
+}
+
+.report-title {
+    text-transform: uppercase;
+    color: #C30574;
+    font-weight: bold;
+}
+
+.report-icon {
+    width: 80%;
+}
+
+.tag {
+    width: 90%;
+}
+
+.coupon {
+    width: 70%;
+}
+
+.report-data {
+    text-align: end;
+    margin-top: 4%;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.report-nav-data {
+    color: #000000;
+    margin-top: 3%;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: right;
+}
+
+.report-data-type {
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #54595F;
+    margin-top: -20px;
+    text-align: right;
+}
+
+.report-center-data {
+    color: #000000;
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
+}
+
+.report-center-type {
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #54595F;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.left-nav {
+   margin-right: 100px !important;
+}
+
+.right-nav {
+    text-align: end;
+}
+
+.report-nav-icon {
+    margin-top: 5px;
+    color: #C30574;
+}

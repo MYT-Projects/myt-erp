@@ -1,0 +1,496 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page-title-edit {
+  font-family: 'Gotham-Rounded-Bold';
+  color: #2a9d3a;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+.page-subtitle-edit {
+  font-family: 'Gotham-Rounded-Bold';
+  color: #424447;
+  letter-spacing: 0.05em;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.input-title {
+  text-transform: capitalize;
+  font-family: 'Gotham-Rounded-Bold';
+  font-style: italic;
+  color: #2a9d3a;
+}
+
+.input-subtitle {
+  font-family: 'Gotham-Rounded-Bold';
+  font-family: 'Gotham-Rounded-Bold';
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.textarea-1 {
+  background: #FFFFFF;
+  border: 1px solid #A4A4A5;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.textarea-1:focus {
+  padding: 5px;
+  border: 1px solid #2a9d3a;
+  outline: none !important;
+  box-shadow: 0 0 10px #87878775;
+}
+
+.textarea-2 {
+  background: #FFFFFF;
+  border: 1px solid #A4A4A5;
+  border-radius: 5px;
+  width: 40%;
+  margin-bottom: 8px;
+}
+
+.textarea-2:focus {
+  padding: 5px;
+  border: 1px solid #2a9d3a;
+  outline: none !important;
+  box-shadow: 0 0 10px #87878775;
+}
+
+.main-cancel-btn {
+  position: absolute;
+  bottom: 4%;
+  right: 15%;
+  font-family: 'Gotham-Rounded-Bold';
+  float: right;
+  padding: 0.2%;
+  padding-top: 0.5%;
+  background-color: transparent;
+  border: 1px solid #C30574;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  color: #C30574;
+  width: 10%;
+}
+
+.main-save-btn {
+  position: absolute;
+  bottom: 4%;
+  right: 3%;
+  font-family: 'Gotham-Rounded-Bold';
+  border: none;
+  padding: 0.2%;
+  padding-top: 0.5%;
+  width: 10%;
+  color: #ffffff;
+  background: #2a9d3a;
+  border: 1px solid #2a9d3a;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-save-btn-long-form {
+  position: relative !important;
+  display: inline-block;
+  width: 10% !important;
+  color: #ffffff;
+  background: #2a9d3a;
+  border: 1px solid #2a9d3a;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.main-cancel-transaction-btn-long-form {
+  position: relative !important;
+  display: inline-block;
+  width: 15% !important;
+  color: #ffffff;
+  background: #2a9d3a;
+  border: 1px solid #2a9d3a;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-search-btn-long-form {
+  position: relative !important;
+  display: inline-block;
+  width: 14% !important;
+  color: #ffffff;
+  background: #2a9d3a;
+  border: 1px solid #2a9d3a;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.main-delete-btn {
+  font-family: 'Gotham-Rounded-Bold';
+  position: absolute;
+  width: 10%;
+  bottom: 3.5%;
+  padding: 0.2%;
+  padding-top: 0.5%;
+  border: none;
+  color: #ffffff;
+  background: #323131;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.main-delete-btn-long-form {
+  position: relative !important;
+  border: none;
+  display: inline-block;
+  width: 10% !important;
+  color: #ffffff;
+  background: #323131;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  margin-right: 65%;
+}
+
+.main-cancel-btn-long-form {
+  position: relative !important;
+  border: none;
+  display: inline-block;
+  width: 10% !important;
+  color: #ffffff;
+  border: 1px solid #C30574;
+  background: #FFFFFF;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  color: #C30574;
+  margin-right: 2%;
+}
+
+.reset-btn {
+  border: none;
+  color: #ffffff;
+  border: 1px solid #C30574;
+  background: #FFFFFF;
+  box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  color: #C30574;
+}
+
+/** Input styles **/
+
+.badge-required {
+  color: #df1227;
+}
+
+.filter-dropdown {
+  margin-top: 1%;
+  background: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  border-radius: 5px;
+  padding: 6px;
+  width: 100%;
+}
+
+.dropdown-1 {
+  background: #FFFFFF;
+  border: 1px solid #4B4B4B;
+  border-radius: 5px;
+  padding: 3px;
+  width: 40%;
+  margin-bottom: 12px;
+}
+
+.input-1 {
+  border: 1px solid #4B4B4B;
+  border-radius: 5px;
+  width: 40%;
+  margin-bottom: 3%;
+}
+
+
+.password-wrapper-login {
+  width: 93.5% !important;
+  margin-left: -5.0%;
+}
+
+.input-2 {
+  border: 1px solid #4B4B4B;
+  border-radius: 5px;
+  width: 19%;
+  margin-top: 1.5%;
+}
+
+.input-3 {
+  border: 1px solid #4B4B4B;
+  margin-left: 3%;
+  border-radius: 5px;
+}
+
+.radio-label {
+  margin-left: 2%;
+  color: #2a9d3a;
+  font-weight: bold;
+  font-family: 'Gotham-Rounded-Medium';
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+  input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -4px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+    }
+
+    input[type='radio']:checked:after {
+        background-color: #2a9d3a;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+.radio-label-2 {
+  margin-left: 2%;
+}
+
+.add-item-btn {
+  font-family: 'Gotham-Rounded-Medium';
+  text-decoration: underline;
+  color: #2a9d3a;
+  font-size: 0.8em;
+  margin-top: -2%;
+  cursor: pointer;
+}
+
+.marginl-2 {
+  margin-left: 2%;
+}
+
+.optional-style {
+  color: #A4A4A5;
+  font-style: italic;
+}
+
+.checkbox-label {
+  margin-left: 3%;
+  font-family: 'Gotham-Rounded-Medium';
+}
+
+.form-container {
+  margin-bottom: 7%;
+}
+
+/* input[type="checkbox"]:checked { 
+  filter: sepia(500%) brightness(80%) hue-rotate(8180deg) saturate(210%) contrast(260%);
+} */
+
+.modal-delete-label {
+  color: #282c34;
+}
+
+.mt-10 {
+  margin-top: 10% !important;
+}
+
+.input-multi {
+  width: 40%;
+}
+
+.loader {
+  padding-left: 3.5% !important;
+  padding-bottom: 1% !important;
+}
+
+.loader-cancel {
+  padding-left: 7.3% !important;
+  padding-bottom: 1% !important;
+}
+
+.loader-lookup {
+  padding-left: 4.5% !important;
+  padding-bottom: 1% !important;
+}
+
+/** Icon **/
+
+.eye-icon {
+  display: inline;
+  margin-left: -5%;
+  color: #282c34;
+  cursor: pointer;
+}
+
+.eye-slash {
+  display: inline;
+  width: 5%;
+  margin-left: -1%;
+}
+
+
+
+.required-icon {
+  color: #df1227;
+  margin-left: 1%;
+}
+
+.minus-icon {
+  color: #2a9d3a;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+/** Margin classes**/
+.move-l-2 {
+  margin-left: 2%;
+}
+
+.move-l-3 {
+  margin-left: 3%;
+}
+
+.move-l-4 {
+  margin-left: 4%;
+}
+
+.move-l-5 {
+  margin-left: 4%;
+}
+
+.move-l-8 {
+  margin-left: 8%;
+}
+
+.move-l-16-5 {
+  margin-left: 16.5%;
+}
+
+.move-r-2 {
+  margin-right: 2%;
+}
+
+.move-r-3 {
+  margin-right: 3%;
+}
+
+.move-r-4 {
+  margin-right: 4%;
+}
+
+.move-r-5 {
+  margin-right: 4%;
+}
+
+.move-r-8 {
+  margin-right: 8%;
+}
+
+.move-r-16-5 {
+  margin-right: 16.5%;
+}
+
+input:disabled {
+  background: #dddddd;
+}
+
+select:disabled {
+  background: #dddddd;
+}
+
+/* A4 print size configuration */
+/* #printablediv {
+  height: 210mm;
+  width: 297mm;
+} */
+
+
+/* dropsearch placed in filter by row css */
+.manager-tabs {
+  position: relative;
+}
+
+.dropsearch-filter {
+  padding: 0 0;
+  border-radius: 10px !important;
+  width: 20%;
+  position: absolute;
+  z-index: 2;
+  margin-right: 20px;
+  text-transform: none;
+}
+
+.css-1s2u09g-control {
+  border-radius: 10px !important;
+}
+.css-1s2u09g-control:hover {
+  border-radius: 10px !important;
+}
+
+/* printing configs */
+@media print {
+  /* body {transform: scale(.7); background-color: #fff;} */
+  table {
+      page-break-inside: avoid;
+  }
+  @page {
+      size: A3;
+      margin: 30px;
+  }
+
+  .additional-note-input {
+      display: none !important;
+  }
+
+  .print-logo {
+      width: 100px;
+  }
+
+  .print-shop-header, .print-label, .print-data, .print-table td, .print-table th {
+      font-size: 10px;
+  }
+
+  .grand-label {
+      margin-right: 10px;
+  }
+
+  .print-signatures {
+      margin-top: 10px;
+  }
+  
+
+}

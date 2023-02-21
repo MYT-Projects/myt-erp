@@ -1,0 +1,279 @@
+
+
+.db-container{
+    border:2px solid #169422; 
+    border-radius: 20px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.purchases-div{
+    z-index: 1;
+    overflow: scroll !important;
+  
+}
+
+.br-20{
+    border-radius: 20px  !important;
+}
+
+.grey-border{
+    border:2px solid #888888 !important; 
+    color: #525252 !important;
+}
+
+.black-text{
+    color:black !important;
+}
+
+.c-height-30{
+    height: 30vh;
+}
+
+.c-height-20{
+    height: 20vh;
+}
+.c-height-15{
+    height: 15vh;
+}
+
+.green-bg{
+    background-color: #169422;
+    color:whitesmoke;
+}
+
+.white-bg{
+    color: #169422;
+    background-color:whitesmoke;
+}
+
+.font-bold{
+    font-family:'Gotham-Rounded-Bold'
+}
+
+.font-medium{
+    font-family:'Gotham-Rounded-Medium';
+    font-size: 26px;
+    color: #545454;
+}
+
+.business-name {
+    font-family:'Gotham-Rounded-Medium';
+    font-size: 20px;
+    color: #545454;
+}
+
+.date-and-time {
+    font-family:'Gotham-Rounded-Medium';
+    font-size: 20px;
+    color: #909090;
+}
+
+.name{
+    font-size: 40px;
+}
+
+.time{
+    font-size:25px;
+}
+
+.date{
+    font-size:20px;
+}
+
+.lh-normal{
+    line-height: normal;
+}
+
+.pl-5{
+    padding-left: 5% !important;
+}
+.dashboard-wrapper{
+    height: 100vh;
+    
+}
+.dashboard {
+    padding: 20px;
+    margin-left: 5% !important;
+    margin-top: 1% !important;
+    transition: margin-left .2s ease-in;
+}
+
+.dashboard.inactive {
+    margin-left: 8%;
+}
+
+.dashboard.active {
+    margin-left: 18% !important;
+}
+.box-wrapper {
+    width: "100%";
+}
+.box-1 {
+    /* width: "100%" !important;  */
+    height: 13vh;
+    padding: 10px;
+    padding-top: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 29px -1px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    /* margin: 10px; */
+}
+
+.box {
+    height: 40vh;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 29px -1px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+}
+
+.box-3 {
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 29px -1px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
+    height: 19vh;
+}
+
+.box-2 {
+    height: 60vh;
+}
+
+.box-header {
+    font-family: 'Gotham-Rounded-Bold';
+    font-size: 16px;
+    color: #545454;
+}
+
+.label {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 14px;
+    color: #169422;
+}
+
+.date {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 10px;
+    color: #909090;
+}
+
+.f-row {
+    flex-direction: row;
+}
+
+.small-hdr {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 12px;
+    color: #909090;
+}
+
+.big-hdr {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+.stats {
+    font-size: 20px;
+    font-family: 'Gotham-Rounded-Bold';
+    color: #169422;
+    text-align: center;
+}
+
+.stats2 {
+    font-size: 15px;
+    font-family: 'Gotham-Rounded-Bold';
+    color: #169422;
+    text-align: center;
+}
+
+.stats-small {
+    font-size: 12px;
+    font-family: 'Gotham-Rounded-Medium';
+    color: #545454;
+}
+
+.stats-quo {
+    word-wrap:break-word;
+    font-size: 8px;
+    font-family: 'Gotham-Rounded-Medium';
+    color: #545454;
+}
+
+.hscroll {
+    overflow: auto;
+    height: 50vh;
+    overflow-y: hidden;
+    font-size: 24px;
+    font-family: 'Gotham-Rounded-Bold';
+    color: #169422;
+}
+
+.fs-card {
+    font-size: 10px;
+}
+
+.fs-normal {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 9px;
+}
+
+.for-approval-wrapper {
+    padding: 10px;
+    overflow-x: scroll;
+}
+
+.for-approval-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.approval-box {
+    width: 139.11px;
+    height: 66px;
+    background: #F2F2F2;
+    border-radius: 5px;
+    /* padding: 10px */
+}
+
+
+.no-data-found span{
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 12px;
+}
+
+.no-data-label {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 14px;
+    color: #909090;
+}
+
+.next-btn {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    margin: 0 auto;
+}
+
+.inventory-adj {
+    overflow: auto;
+    height: 30vh;
+    overflow-x: hidden;
+    /* height:  */
+}
+
+.quotations {
+    overflow: auto;
+    height: 8vh;
+    font-size: 24px;
+    font-family: 'Gotham-Rounded-Bold';
+    color: #169422;
+    /* overflow-y: hidden; */
+    /* height:  */
+}
+
+.adjustment-btn {
+    background-color: transparent;
+    border-color: transparent;
+}

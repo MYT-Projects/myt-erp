@@ -1,0 +1,184 @@
+/* PI table */
+.PI-table {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+/* PI filters */
+.PI-filters span,
+.PI-filters .form-select,
+.PI-filters .form-control {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.PI-filters span {
+    color: #5E5E5E;
+    text-transform: uppercase;
+}
+
+.PI-filters .form-select {
+    width: 13.5vw;
+}
+
+.PI-filters .form-control {
+    width: 9.5vw;
+}
+
+/* PI add modal */
+.PI-modal-header,
+.PI-header {
+    font-family: "Gotham-Rounded-Bold";
+    font-size: 25px;
+
+    color: #545454;
+}
+
+.PI-header {
+    text-transform: uppercase;
+}
+
+.PI-header2 {
+    background: #169422;
+    border: 1px solid #169422;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1vh 1vw;
+}
+
+.PI-modal-header {
+    line-height: 30px;
+    margin: 0 2vw;
+}
+
+.PI-modal-body {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    padding: 1vh 1vw 6vh 1vw;
+    margin: 0 2vw;
+}
+
+.PI-modal-label,
+.PI-modal-body .form-control,
+.PI-header2,
+.PI-add-form label,
+.pay-footer,
+.PI-add-form input,
+.PI-add-form select,
+.footer-data {
+    font-family: "Gotham-Rounded-Medium";
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.PI-modal-label,
+.pay-footer {
+    text-transform: uppercase;
+    color: #169422;
+}
+
+.PI-modal-body .form-control {
+    background: #FFFFFF;
+    border: 1px solid #B9B9B9;
+    border-radius: 10px;
+
+    margin-top: 1vh;
+}
+
+.PI-modal-buttons {
+    margin: 0 2vw;
+}
+
+/* PI add */
+.PI-add-form {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    padding: 3vh 1vw;
+}
+
+.PI-add-form label {
+    color: #169422;
+    text-transform: uppercase;
+}
+
+.PI-add-form input,
+.PI-add-form input:focus,
+.PI-add-form select,
+.PI-add-form select:focus {
+    background: #FFFFFF;
+    border: 1px solid #B9B9B9;
+    border-radius: 10px;
+    color: #5E5E5E;
+}
+
+.color-green {
+    color: #169422 !important;
+}
+
+.color-gray {
+    color: #5E5E5E !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.form-table th:nth-child(2),
+.form-table th:nth-child(4),
+.form-table td:nth-child(2),
+.form-table td:nth-child(4) {
+    text-align: center;
+}
+
+.form-table th:nth-child(1),
+.form-table th:nth-child(3),
+.form-table td:nth-child(1),
+.form-table td:nth-child(3) {
+    max-width: 5vw;
+}
+
+.footer-label {
+    font-family: "Gotham-Rounded-Bold";
+    font-size: 15px;
+
+    text-transform: uppercase;
+}
+
+.PI-add-form select#bank.form-control {
+    background-image: url(/src/Assets/Images/caret-down-black.png) !important;
+    background-size: 3%;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+}
+
+.PI-payment-info-wrapper {
+    background: #FFFFFF;
+    border-radius: 10px !important;
+    padding: 1vh .5vw !important;
+    width: 11vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px
+}
+
+.PI-payment-info {
+    font-family: 'Gotham-Rounded-Medium';
+    color: #5E5E5E;
+    text-transform: uppercase;
+    
+}
+
+.PI-date-btn {
+    font-family: "Gotham-Rounded-Medium";
+    color: #FFFFFF;
+}

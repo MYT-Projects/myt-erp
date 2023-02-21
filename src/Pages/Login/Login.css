@@ -1,0 +1,133 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh !important;
+}
+
+.login-cont {
+    border: 3px solid #2a9d3a;
+    box-sizing: border-box;
+    border-radius: 45px;
+    padding: 3% 15% 5% 15%;
+
+}
+
+.login-logo {
+    width: 100%;
+    padding: 10%;
+    margin-bottom: 5%;
+}
+
+.mt-10 {
+    margin-top: 10%;
+}
+
+.username-input,
+.password-input {
+    font-family: 'Gotham-Rounded-Medium';
+    font-weight: bold;
+    margin-bottom: 1%;
+    width: 100%;
+    padding: 3% !important;
+
+    border: none !important;
+    background: #E8E8E8 !important;
+    border-top-right-radius: 9px !important;
+    border-bottom-right-radius: 9px !important;
+}
+
+
+
+.login-cont .form-control:focus {
+    box-shadow: 0 0 0 0.1rem #2a9d3a !important;
+}
+
+.icon-text {
+    background: #E8E8E8 !important;
+    z-index: 1 !important;
+    height: 93%;
+    border-top-left-radius: 9px !important;
+    border-bottom-left-radius: 9px !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.icon-text-2 {
+    background: #E8E8E8 !important;
+    z-index: 1 !important;
+    height: 90%;
+    border-top-left-radius: 9px !important;
+    border-bottom-left-radius: 9px !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.icon-cont {
+    z-index: 1;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 3%;
+    margin-top: 5%;
+
+    border: none;
+    background: #2a9d3a;
+    border-radius: 9px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: 'Gotham-Rounded-Medium';
+}
+
+.login-btn:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.username-icon {
+    width: 100%;
+    margin-left: 5%;
+    color: #FBC204;
+}
+
+.eye-icon-login {
+    display: inline !important;
+    margin-left: -13% !important;
+    margin-top: 2.5% !important;
+    z-index: 10;
+    color: #282c34;
+    cursor: pointer;
+}
+
+.eye-icon-login-2 {
+    display: inline !important;
+    margin-left: -10% !important;
+    margin-top: 2.2% !important;
+    z-index: 10;
+    color: #282c34;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.reset-label {
+    font-family: 'Gotham-Rounded-Medium';
+    font-size: 14px;
+    text-align: left;
+}
+
+.password-wrapper-login-2 {
+    width: 90% !important;
+    margin-left: -10% !important;
+}
+
+.custom-border-radius {
+    border-top-right-radius: 0 ! important;
+    border-bottom-right-radius: 0 ! important;
+}
+
+.text {
+    font-family: 'Gotham-Rounded-Medium' !important;
+}
