@@ -14,7 +14,7 @@ import passwordIcon from "../../Assets/Images/Login/password.png";
 import "./Login.css";
 
 //api
-import { loginUser, loginUser2 } from "../../Helpers/apiCalls/authApi";
+import { loginUser } from "../../Helpers/apiCalls/authApi";
 import { refreshPage } from "../../Helpers/Utils/Common";
 
 export default function Login() {
@@ -60,17 +60,17 @@ export default function Login() {
             );
             localStorage.setItem("token", JSON.stringify(response.data.user.token));
 
-            //potato corner
-            localStorage.setItem(
-                "api-key2",
-                // JSON.stringify(response2.data.user.api_key).replace(/['"]+/g, "")
-            );
-            localStorage.setItem(
-                "token2",
-                // JSON.stringify(response2.data.user.token)
-            );
-
-            // message
+            // //potato corner
+            // localStorage.setItem(
+            //     "api-key2",
+            //     // JSON.stringify(response2.data.user.api_key).replace(/['"]+/g, "")
+            // // );
+            // localStorage.setItem(
+            //     "token2",
+            //     // JSON.stringify(response2.data.user.token)
+            // );
+            
+            console.log('Im here');
             toast.success("Successful Login!", { style: toastStyle() });
             setTimeout(() => refreshPage(), 2000);
         } else if (response.error) {
