@@ -377,8 +377,8 @@
 }
 
 .form-check-input:checked {
-    background-color: #169422 !important;
-    border-color: #169422 !important;
+    background-color: #5ac8e1 !important;
+    border-color: #5ac8e1 !important;
 }
 
 .btn-primary {
@@ -389,12 +389,12 @@
 
 .nc-modal-custom-row-green {
     font-family: 'Gotham-Rounded-Medium'!important;
-    color: #169422;
+    color: #5ac8e1;
 }
 
 .nc-modal-custom-row-green-not-bold {
     font-family: 'Gotham-Rounded-Light'!important;
-    color: #169422;
+    color: #5ac8e1;
     letter-spacing: 0.05em;
 }
 

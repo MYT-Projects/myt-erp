@@ -12,7 +12,7 @@ body {
 
 .dropdown .dropdown-btn {
   padding: 1px 15px;
-  background: #169422;
+  background: #5ac8e1;
   box-sizing: border-box;
   border-radius: 5px !important;
   font-family: "Gotham-Rounded-Medium";
@@ -59,11 +59,11 @@ body {
 }
 
 .yellow {
-  color: #FBC204 !important;
+  color: #3c3c43 !important;
 }
 
 .green {
-  background-color: #60d860 !important;
+  background-color: #5ac8e1 !important;
 }
 
 .red {

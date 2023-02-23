@@ -57,14 +57,14 @@
 
 .button-primary,
 .dropdown-toggle btn btn-primary {
-    background: #169422 !important;
+    background: #5ac8e1 !important;
     border: none !important;
     color: white;
 }
 
 .button-primary:hover,
 .dropdown-toggle btn btn-primary {
-    background: #077713;
+    background: #5ac8e1;
     border: none;
     color: white;
 }

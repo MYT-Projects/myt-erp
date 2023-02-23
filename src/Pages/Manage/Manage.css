@@ -23,7 +23,7 @@
         border: none;
         padding: 1% 0%;
         margin-left: 3%;
-        background: #169422 !important;
+        background: #5ac8e1 !important;
         border-color: transparent !important;
         border-radius: 10px;
         color: #ffff;
@@ -41,7 +41,7 @@
     }
 
     .btn-group, .dropdown-toggle, .add-btn:hover {
-        background: #127a1c !important;
+        background: #5ac8e1 !important;
     }
 
     .margin-top-3 {

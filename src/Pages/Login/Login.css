@@ -6,7 +6,7 @@
 }
 
 .login-cont {
-    border: 3px solid #2a9d3a;
+    border: 3px solid #5ac8e1;
     box-sizing: border-box;
     border-radius: 45px;
     padding: 3% 15% 5% 15%;
@@ -40,7 +40,7 @@
 
 
 .login-cont .form-control:focus {
-    box-shadow: 0 0 0 0.1rem #2a9d3a !important;
+    box-shadow: 0 0 0 0.1rem #5ac8e1 !important;
 }
 
 .icon-text {
@@ -75,7 +75,7 @@
     margin-top: 5%;
 
     border: none;
-    background: #2a9d3a;
+    background: #5ac8e1;
     border-radius: 9px;
     color: #ffffff;
     letter-spacing: 0.1em;
@@ -90,7 +90,7 @@
 .username-icon {
     width: 100%;
     margin-left: 5%;
-    color: #FBC204;
+    color: #3d9889;
 }
 
 .eye-icon-login {

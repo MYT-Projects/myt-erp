@@ -91,7 +91,7 @@ export default function Login() {
                 <Toaster position="top-right" reverseOrder={false} />
                 <div className="row">
                     <div className="col d-flex justify-content-center">
-                        <img src={logo} alt="logo" className="login-logo" />
+                        {/* <img src={logo} alt="logo" className="login-logo" ></img> */}
                     </div>
                 </div>
                 <div className="row">

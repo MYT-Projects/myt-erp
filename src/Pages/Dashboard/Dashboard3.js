@@ -838,15 +838,15 @@ export default function Dashboard3() {
                 </Row>
                 {type === "admin" ? (
                     <Fragment>
-                        <Row className="mt-3">
+                        {/* <Row className="mt-3">
                             <Col>
                                 <h2 className="business-name">Mango Magic</h2>
                             </Col>
                             <Col>
                                 <h2 className="business-name">Potato Corner</h2>
                             </Col>
-                        </Row>
-                        <Row className="d-flex justify-content-between align-items-end">
+                        </Row> */}
+                        {/* <Row className="d-flex justify-content-between align-items-end">
                             <Col>
                                 <Row>
                                     <Col className="me-auto mx-2 box-1">
@@ -945,7 +945,7 @@ export default function Dashboard3() {
                                     </Col>
                                 </Row>
                             </Col>
-                        </Row>
+                        </Row> */}
                         <Row className="d-flex justify-content-between align-items-end mt-4">
                             <Col>
                                 <Row>

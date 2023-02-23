@@ -14,7 +14,7 @@ import "../Navbar/Navbar.css";
 
 //icons
 import logout from "../../Assets/Images/Navbar/logout.png";
-import logo from "../../Assets/Images/Login/logo_2.png";
+import logo from "../../Assets/Images/Login/logo.png";
 // import po from "../../Assets/Images/Navbar/po.png";
 import supplies from "../../Assets/Images/Navbar/supplies.png";
 import sales from "../../Assets/Images/Navbar/sales.png";

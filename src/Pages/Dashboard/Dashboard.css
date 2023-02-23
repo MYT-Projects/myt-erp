@@ -1,9 +1,9 @@
 
 
 .db-container{
-    border:2px solid #169422; 
+    border:2px solid #5ac8e1; 
     border-radius: 20px;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 10px 8px #b9eeff;
 }
 
 .purchases-div{
@@ -37,12 +37,12 @@
 }
 
 .green-bg{
-    background-color: #169422;
+    background-color: #5ac8e1;
     color:whitesmoke;
 }
 
 .white-bg{
-    color: #169422;
+    color: #5ac8e1;
     background-color:whitesmoke;
 }
 
@@ -148,7 +148,7 @@
 .label {
     font-family: 'Gotham-Rounded-Medium';
     font-size: 14px;
-    color: #169422;
+    color: #5ac8e1;
 }
 
 .date {
@@ -177,14 +177,14 @@
 .stats {
     font-size: 20px;
     font-family: 'Gotham-Rounded-Bold';
-    color: #169422;
+    color: #5ac8e1;
     text-align: center;
 }
 
 .stats2 {
     font-size: 15px;
     font-family: 'Gotham-Rounded-Bold';
-    color: #169422;
+    color: #5ac8e1;
     text-align: center;
 }
 
@@ -207,7 +207,7 @@
     overflow-y: hidden;
     font-size: 24px;
     font-family: 'Gotham-Rounded-Bold';
-    color: #169422;
+    color: #5ac8e1;
 }
 
 .fs-card {
@@ -268,7 +268,7 @@
     height: 8vh;
     font-size: 24px;
     font-family: 'Gotham-Rounded-Bold';
-    color: #169422;
+    color: #5ac8e1;
     /* overflow-y: hidden; */
     /* height:  */
 }

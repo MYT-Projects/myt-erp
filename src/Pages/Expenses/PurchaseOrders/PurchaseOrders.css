@@ -145,12 +145,12 @@
     font-family: "Gotham-Rounded-Medium";
     font-size: 16px !important;
     line-height: 19px !important;
-    color: #169422 !important;
+    color: #5ac8e1 !important;
     text-transform: uppercase !important;
     text-align: left;
 
     background: #FFFFFF;
-    border: 1px solid #169422 !important;
+    border: 1px solid #5ac8e1 !important;
     border-radius: 10px 10px 0px 0px !important;
     padding: 1vh .5vw !important;
     width: 11vw;
@@ -160,7 +160,7 @@
 .nav-link.active:hover,
 .react-select__option--is-selected {
     color: white !important;
-    background: #169422 !important;
+    background: #5ac8e1 !important;
 }
 
 .react-select__option:hover,
@@ -187,7 +187,7 @@
 .PO-filters .form-select,
 .add-select,
 .PO-select-action.form-select {
-    background-color: #169422 !important;
+    background-color: #5ac8e1 !important;
     border-radius: 7px !important;
     color: white !important;
     max-height: 35px !important;
