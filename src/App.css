@@ -278,7 +278,7 @@
     }
 
     input[type='radio']:checked:after {
-        background-color: #2a9d3a;
+        background-color: #5ac8e1;
         content: '';
         display: inline-block;
         visibility: visible;
