@@ -165,7 +165,7 @@ export default function Login() {
                         {disableClick === true && (
                             <ReactLoading
                                 type="spinningBubbles"
-                                color="#2a9d3a"
+                                color="#5ac8e1"
                                 height={50}
                                 width={50}
                             />

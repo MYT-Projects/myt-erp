@@ -611,7 +611,7 @@ export default function Payables() {
                             styles={{
                                 control: (baseStyles, state) => ({
                                 ...baseStyles,
-                                backgroundColor: state.isSelected ? 'white' : '#169422',
+                                backgroundColor: state.isSelected ? 'white' : '#5ac8e1',
                                 borderRadius: "7px",
                                 border: "0px",
                                 minHeight: "20px",

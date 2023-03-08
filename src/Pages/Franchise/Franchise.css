@@ -18,7 +18,7 @@
     font-size: small;
     font-weight: bold;
     line-height: 18px;
-    color: #169422;
+    color: #5ac8e1;
     text-transform: uppercase;
 }
 
@@ -43,8 +43,8 @@
 }
 
 .css-1pahdxg-control {
-    border-color: #169422 !important;
-    box-shadow: 0 0 0 1px #169422 !important;
+    border-color: #5ac8e1 !important;
+    box-shadow: 0 0 0 1px #5ac8e1 !important;
 }
 
 .nc-modal-custom-suggestion {
@@ -65,8 +65,8 @@
 
 .nc-modal-custom-suggestion:focus {
     outline: none;
-    border: 1px solid #169422 !important;
-    box-shadow: 0 0 0 1px #169422 !important;
+    border: 1px solid #5ac8e1 !important;
+    box-shadow: 0 0 0 1px #5ac8e1 !important;
 }
 
 .text-right {

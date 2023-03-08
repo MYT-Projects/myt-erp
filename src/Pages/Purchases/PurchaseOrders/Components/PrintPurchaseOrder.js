@@ -483,7 +483,7 @@ export default function PrintPurchaseOrder() {
                                         xs={4}
                                         className="print-label"
                                         style={{
-                                            color: "#169422",
+                                            color: "#5ac8e1",
                                             fontFamily: "Gotham-Rounded-Medium",
                                         }}
                                     >

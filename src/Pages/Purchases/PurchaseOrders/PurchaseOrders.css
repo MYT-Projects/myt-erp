@@ -1,12 +1,12 @@
 .login-cont {
-    border: 3px solid #2a9d3a;
+    border: 3px solid #5ac8e1;
     box-sizing: border-box;
     border-radius: 45px;
     padding: 3% 15% 5% 15%;
 }
 
 .add-supplier-label {
-    color: #2a9d3a;
+    color: #5ac8e1;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -277,7 +277,7 @@
     font-family: 'Gotham-Rounded-Medium';
     font-size: small;
     line-height: 18px;
-    color: #169422;
+    color: #5ac8e1;
 
     text-transform: uppercase;
 }
@@ -333,7 +333,7 @@
     font-size: 13px;
     line-height: 16px;
 
-    background: #169422;
+    background: #5ac8e1;
     border-radius: 7px;
     border: none;
     padding: 1.5vh 2vw;
@@ -347,7 +347,7 @@
 .add-item:hover,
 .add-item:active,
 .add-item:focus {
-    background: #0f861b;
+    background: #5ac8e1;
     box-shadow: none !important;
 }
 
@@ -364,7 +364,7 @@
 }
 
 .edit-cancel button {
-    background: #169422;
+    background: #5ac8e1;
     border-radius: 7px;
     border: none;
 }
@@ -372,7 +372,7 @@
 .edit-cancel button:hover,
 .edit-cancel button:focus,
 .edit-cancel button:active {
-    background: #0f861b;
+    background: #5ac8e1;
     box-shadow: none !important;
 }
 
@@ -484,7 +484,7 @@
 .print-table td:nth-child(4),
 .print-table td:nth-child(5),
 .print-table-footer-data {
-    color: #169422;
+    color: #5ac8e1;
 }
 
 .print-grand-total {
@@ -512,8 +512,8 @@
 }
 
 .review-po {
-    background: #169422;
-    border: 1px solid #169422;
+    background: #5ac8e1;
+    border: 1px solid #5ac8e1;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 
@@ -609,15 +609,15 @@
 .print-close {
     line-height: 18px;
     background: #FFFFFF;
-    border: 1px solid #169422;
+    border: 1px solid #5ac8e1;
     border-radius: 7px;
-    color: #169422 !important;
+    color: #5ac8e1 !important;
     height: 5vh;
 }
 
 .print-close:hover {
     color: white !important;
-    background-color: #169422;
+    background-color: #5ac8e1;
 }
 
 .print-print {

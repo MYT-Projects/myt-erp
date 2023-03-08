@@ -75,12 +75,12 @@
 
 .button-primary-clear {
     background: white;
-    border: 2px solid #169422;
-    color: #169422;
+    border: 2px solid #5ac8e1;
+    color: #5ac8e1;
 }
 
 .button-primary-clear:hover {
-    background: #077713;
+    background: #5ac8e1;
     border: none;
     color: white;
 }

@@ -19,7 +19,8 @@ $primary-color: #000;
 $light-color: #fff;
 $border-color: #ddd;
 $header-bg-color: #F9E25D;
-$header-text-color: #169422;
+$header-text-color: #5ac8e1;
+
 $ff-primary: 'Gotham-Rounded-Medium', sans-serif;
 
 @mixin break {
@@ -160,7 +161,7 @@ body {
     }
 
     .value {
-      color: #169422;
+      color: #5ac8e1;
     }
     
     .type-navigation-btn {
@@ -187,7 +188,8 @@ body {
     }
 
     .nav-icon {
-      color: #169422;
+      color: #5ac8e1;
+
     }
 
     &--break-lg {
@@ -309,7 +311,7 @@ body {
 }
 
 .ACTIVE {
-  color: rgb(55, 175, 65);
+  color: rgb(90,200,225);
   font-weight: bold;
 }
 

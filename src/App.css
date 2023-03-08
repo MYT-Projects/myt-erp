@@ -40,7 +40,7 @@
 
 .page-title-edit {
   font-family: 'Gotham-Rounded-Bold';
-  color: #2a9d3a;
+  color: #5ac8e1;
   letter-spacing: 0.05em;
   font-size: 1.2rem;
 }
@@ -57,7 +57,7 @@
   text-transform: capitalize;
   font-family: 'Gotham-Rounded-Bold';
   font-style: italic;
-  color: #2a9d3a;
+  color: #5ac8e1;
 }
 
 .input-subtitle {
@@ -78,7 +78,7 @@
 
 .textarea-1:focus {
   padding: 5px;
-  border: 1px solid #2a9d3a;
+  border: 1px solid #5ac8e1;
   outline: none !important;
   box-shadow: 0 0 10px #87878775;
 }
@@ -93,7 +93,7 @@
 
 .textarea-2:focus {
   padding: 5px;
-  border: 1px solid #2a9d3a;
+  border: 1px solid #5ac8e1;
   outline: none !important;
   box-shadow: 0 0 10px #87878775;
 }
@@ -123,8 +123,8 @@
   padding-top: 0.5%;
   width: 10%;
   color: #ffffff;
-  background: #2a9d3a;
-  border: 1px solid #2a9d3a;
+  background: #5ac8e1;
+  border: 1px solid #5ac8e1;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -134,8 +134,8 @@
   display: inline-block;
   width: 10% !important;
   color: #ffffff;
-  background: #2a9d3a;
-  border: 1px solid #2a9d3a;
+  background: #5ac8e1;
+  border: 1px solid #5ac8e1;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -144,8 +144,8 @@
   display: inline-block;
   width: 15% !important;
   color: #ffffff;
-  background: #2a9d3a;
-  border: 1px solid #2a9d3a;
+  background: #5ac8e1;
+  border: 1px solid #5ac8e1;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -155,8 +155,8 @@
   display: inline-block;
   width: 14% !important;
   color: #ffffff;
-  background: #2a9d3a;
-  border: 1px solid #2a9d3a;
+  background: #5ac8e1;
+  border: 1px solid #5ac8e1;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -258,7 +258,7 @@
 
 .radio-label {
   margin-left: 2%;
-  color: #2a9d3a;
+  color: #5ac8e1;
   font-weight: bold;
   font-family: 'Gotham-Rounded-Medium';
 }
@@ -292,7 +292,7 @@
 .add-item-btn {
   font-family: 'Gotham-Rounded-Medium';
   text-decoration: underline;
-  color: #2a9d3a;
+  color: #5ac8e1;
   font-size: 0.8em;
   margin-top: -2%;
   cursor: pointer;
@@ -370,7 +370,7 @@
 }
 
 .minus-icon {
-  color: #2a9d3a;
+  color: #5ac8e1;
   margin-left: 1%;
   cursor: pointer;
 }

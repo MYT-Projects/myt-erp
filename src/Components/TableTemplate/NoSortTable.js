@@ -351,7 +351,7 @@ export default function NoSortTable({
 
     return showLoader ? (
         <div className="d-flex justify-content-center my-5">
-            <SyncLoader color="#169422" size={15} />
+            <SyncLoader color="#5ac8e1" size={15} />
         </div>
     ) : (
         <DataTable

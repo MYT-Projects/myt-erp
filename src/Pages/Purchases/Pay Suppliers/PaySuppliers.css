@@ -28,8 +28,8 @@
 }
 
 .select-cell .react-select__control--is-focused {
-    border-color: #2a9d3a !important;
-    box-shadow: 0 0 0 0.1rem #2a9d3a !important;
+    border-color: #5ac8e1 !important;
+    box-shadow: 0 0 0 0.1rem #5ac8e1 !important;
 }
 
 
@@ -90,7 +90,7 @@
 }
 
 .link-to-add {
-    color: #2a9d3a;
+    color: #5ac8e1;
 }
 
 .f-right {
