@@ -1,4 +1,4 @@
-import NoDataImg from "../../Assets/Images/no-data-img.png"
+import NoDataImg from "../../Assets/Images/nodatafound.png"
 
 import "./NoDataPrompt.css"
 

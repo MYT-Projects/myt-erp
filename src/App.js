@@ -226,6 +226,9 @@ import Employees from "./Pages/Manage/Employees";
 // Forwarders
 import Forwarders from "./Pages/Manage/Forwarders";
 
+// ExpenseTypes
+import ExpenseTypes from "./Pages/Manage/ExpenseTypes";
+
 // BuildItem
 import BuildItem from "./Pages/Manage/BuildItem";
 import BuildItemView from "./Pages/Manage/BuildItemView";
@@ -2129,6 +2132,18 @@ function App() {
                             (type === "admin" ||
                                 type === "purchasing_officer") ? (
                                 <Forwarders />
+                            ) : (
+                                <Navigate to="/" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/expensetypes"
+                        element={
+                            token &&
+                            (type === "admin" ||
+                                type === "purchasing_officer") ? (
+                                <ExpenseTypes/>
                             ) : (
                                 <Navigate to="/" />
                             )

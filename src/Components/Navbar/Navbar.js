@@ -14,7 +14,7 @@ import "../Navbar/Navbar.css";
 
 //icons
 import logout from "../../Assets/Images/Navbar/logout.png";
-import logo from "../../Assets/Images/Login/logo.png";
+import logo from "../../Assets/Images/Login/mytlogo.png";
 // import po from "../../Assets/Images/Navbar/po.png";
 import supplies from "../../Assets/Images/Navbar/supplies.png";
 import sales from "../../Assets/Images/Navbar/sales.png";
@@ -170,6 +170,7 @@ const Navbar = (props) => {
                 // { name: "DSR Items", to: "/dsritems" },
                 { name: "Employees", to: "/employees" },
                 { name: "Forwarders", to: "/forwarders" },
+                { name: "Expense Types", to: "/expensetypes" },
                 // { name: "Inventory Level", to: "/inventorylevel" },
                 // { name: "Items", to: "/items" },
                 // { name: "Item Prices", to: "/itemprices" },

@@ -354,6 +354,19 @@
         background-repeat: no-repeat;
         background-position: 1% 50%;
     }
+    .custom-modal-body-title-expensetype-details {
+        margin-top: 10%;
+        padding-left: 4% !important;
+        text-align: left !important;
+        font-family: 'Gotham-Rounded-Medium';
+        font-style: normal;
+        font-weight: 900;
+        font-size: xx-large;
+        color: #545454 !important;
+        background-image: url("../../Assets/Images/Modal/expensetypes.png");
+        background-repeat: no-repeat;
+        background-position: 1% 50%;
+    }
 
     .custom-modal-body-title-contact-info {
         margin-top: 10%;
@@ -939,6 +952,7 @@
     .custom-modal-body-title-act,
     .custom-modal-body-title-supplier-details,
     .custom-modal-body-title-forwarder-details,
+    .custom-modal-body-title-expensetype-details,
     .custom-modal-body-title-contact-info,
     .custom-modal-body-title-branch-details {
         font-size: 15px !important;
